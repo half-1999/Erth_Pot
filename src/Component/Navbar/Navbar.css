@@ -1,0 +1,25 @@
+.hover_animation {
+    display: inline-block;
+    position: relative;
+    /* color: #0087ca; */
+    /* text-decoration: none; */
+  }
+  .hover_animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    /* height: 0.05em; */
+    height: 0.1em;
+    bottom: 0;
+    left: 0;
+    /* background: currentcolor; */
+    background:#00b0ea;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
